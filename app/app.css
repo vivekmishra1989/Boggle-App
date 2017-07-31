@@ -1,0 +1,53 @@
+body{
+	background-color: #F57921;
+}
+.boggle-body{
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 10px 45px;
+}
+.boggle-table{
+	border: 5px solid #FFCA08;
+	min-height: 360px;
+	background-color: #398BD4;
+	width: 360px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.boggle-cell{
+	width: 60px;
+	height: 60px;
+	background-color: white;
+	border-radius: 5px;
+	border: 1px solid #cccccc;
+	margin: 5px;
+	text-align: center;
+	float: left;
+	padding-top: 19px;
+	font-size: 18px;
+}
+.boggle-cell-selected{
+	background-color: #ACCEEC;
+}
+.boggle-control{
+	margin-top: 20px;
+}
+.text-left{
+	text-align: left;
+}
+.scoreTable{
+	margin: 10px 0px;
+}
+.scoreTable,.scoreTable > thead > tr > th,.scoreTable > tbody > tr > td,.scoreTable > tfoot > tr > td{
+	border: 2px solid #FFCA08;
+	text-align: left;
+}
+.scoreTable thead td,.scoreTable tfoot td{
+	font-weight: bold;
+}
+
+.bold{
+	font-weight: bold;	
+}

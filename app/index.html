@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="boggleApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Boggle App</title>
+    <link rel="icon" href="img/logo.PNG" type="image/gif" sizes="16x32">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+
+  </head>
+  <body>
+
+    <div class="boggle-body" ng-controller="BoggleController">
+    	<img src="img/logo.PNG" height="50" width="120">
+    	<div class="boggle-table">
+	    	<div class="boggle-cell bold" ng-class="{'boggle-cell-selected' : die.selected}" ng-repeat="die in dies" ng-click="selectDie(die)">
+	    		{{die.char}}
+	    	</div>
+    	</div>
+		<div class="row boggle-control">
+			<div class="col-xs-8 text-left">
+				<span class="bold">Current Word:</span> <span> {{currentWord}}</span>
+			</div>
+			<div class="col-xs-4">
+				<button ng-click="submitWord()">Submit Word</button>
+			</div>
+		</div>
+		<table class="table table-bordered scoreTable">
+		    <thead>
+		      <tr>
+		        <th>Word</th>
+		        <th>Score</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr ng-repeat="word in selectedWords">
+		        <td>{{word.word}}</td>
+		        <td>{{word.score}}</td>
+		      </tr>
+		    </tbody>
+		    <tfoot>
+		    	<tr>
+		    		<td>Total Score</td>
+		    		<td>{{totalScore}}</td>
+		    </tfoot>
+		 </table> 
+    </div>
+
+  </body>
+</html>
